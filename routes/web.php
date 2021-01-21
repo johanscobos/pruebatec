@@ -17,10 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get(
-    '/productos', 
-    [
-       'as'   => 'productos',
-       'uses' => 'ProductoController@index'
-    ]
- );
+Route::resource('ventas', 'VentaController');
