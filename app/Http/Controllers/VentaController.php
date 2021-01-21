@@ -42,6 +42,8 @@ class VentaController extends Controller
     public function store(Request $request)
     {
         //
+        $datosVenta = request()->except('_token');
+        Venta::insert($datosVenta);//aca se podría devolver como un json sin problema(esto para evidenciar lo de la apirest)
     }
 
     /**
